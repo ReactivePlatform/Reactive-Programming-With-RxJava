@@ -19,3 +19,8 @@ If you find any example incomplete or broken, please [submit a PR](https://githu
 
 1. Some examples were slightly modified to support newer versions of dependent libraries
 2. Java projects can't simply import Android `.aar` libraries. Therefore parts of [RxAndroid](https://github.com/ReactiveX/RxAndroid) and [RxBinding](https://github.com/JakeWharton/RxBinding) source code were copied directly.
+
+## Update dependency
+
+Run with:
+>gradle dependencyUpdates -Drevision=release
