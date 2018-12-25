@@ -1,3 +1,7 @@
+plugins {
+    id 'com.github.ben-manes.versions' version '0.20.0'
+}
+
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
@@ -10,7 +14,8 @@ repositories {
 
 dependencies {
     testCompile 'io.reactivex:rxjava:1.2.2'
-    testCompile 'io.reactivex:rxnetty-http:0.5.2-rc.4'
+    testCompile 'io.reactivex:rxnetty-http:0.5.2'
+    testCompile 'io.netty:netty-all:4.1.32.Final'
     testCompile 'com.netflix.hystrix:hystrix-core:1.5.8'
     testCompile 'com.netflix.hystrix:hystrix-metrics-event-stream:1.5.8'
 
@@ -54,8 +59,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.5.2'
     testCompile 'org.mockito:mockito-core:2.2.15'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
 }
